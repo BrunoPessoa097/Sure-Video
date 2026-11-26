@@ -1,0 +1,27 @@
+name: "Sugerir una funcionalidad"
+description: "Sugiere una nueva funcionalidad o mejora para Sure Video."
+title: "[FEATURE] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema o necesidad
+      description: Describe el problema o la necesidad que motivó esta sugerencia.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solución sugerida
+      description: Explica cómo imaginas que podría funcionar esta funcionalidad.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativas consideradas
+      description: Indica otras soluciones que hayas considerado, si las hay.
+    validations:
+      required: false

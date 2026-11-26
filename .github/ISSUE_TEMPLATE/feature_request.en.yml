@@ -1,0 +1,27 @@
+name: "Suggest a feature"
+description: "Suggest a new feature or improvement for Sure Video."
+title: "[FEATURE] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or need
+      description: Describe the problem or need that prompted this suggestion.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Suggested solution
+      description: Explain how you imagine this feature could work.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: List other solutions you considered, if any.
+    validations:
+      required: false
