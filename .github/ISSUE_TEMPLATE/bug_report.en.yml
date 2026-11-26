@@ -1,0 +1,41 @@
+name: "Report a bug"
+description: "Report an error or unexpected behavior in Sure Video."
+title: "[BUG] "
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Problem description
+      description: Describe the problem you encountered.
+      placeholder: Explain what happened.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the steps needed to reproduce the problem.
+      placeholder: |
+        1. Open...
+        2. Click...
+        3. Observe the error.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Provide your operating system and any other relevant information.
+      placeholder: E.g., Linux, Windows, Sure Video version.
+    validations:
+      required: false
