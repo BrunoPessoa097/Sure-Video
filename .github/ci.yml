@@ -1,0 +1,43 @@
+name: CI GO
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    name: Qualidade de código
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup para GO
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+
+      - name: Verificação de formatação
+        run: |
+          files=$(gofmt -l .)
+          if [ -n "$files" ]; then
+            echo "Files need formatting:"
+            echo "$files"
+            exit 1
+          fi
+
+      - name: Run go vet
+        run: go vet ./...
+
+      - name: Run tests
+        run: go test -race -cover ./...
+
+      - name: Build
+        run: go build ./...
