@@ -3,6 +3,7 @@ module github.com/BrunoPessoa097/sure-video
 go 1.27.4
 
 require (
+	fyne.io/fyne/v2 v2.8.3 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect
 	github.com/mattn/go-sqlite3 v1.14.53 // indirect
